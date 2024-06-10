@@ -1,4 +1,5 @@
 import express from 'express';
+import { Request, Response, NextFunction } from 'express';
 import morgan from 'morgan';
 import helmet from 'helmet';
 import xss from 'xss-clean';
@@ -33,7 +34,7 @@ app.use(xss());
 // app.use(compression());
 
 // Test middleware
-app.use((req, res, next) => {
+app.use((req: Request, res: Response, next: NextFunction) => {
   req.requestTime = new Date().toISOString();
   // console.log(req.cookies);
   next();
@@ -42,7 +43,7 @@ app.use((req, res, next) => {
 // Routes
 app.use('/api/books', bookRouter);
 
-app.all('*', (req, res, next) => {
+app.all('*', (req: Request, res: Response, next: NextFunction) => {
   next(new AppError(`Can't find ${req.originalUrl} on this Server!`, 404));
 });
 

@@ -4,7 +4,7 @@ import { BookModel } from './../models/bookModel';
 import { AppError } from './../utils/appError';
 import { Request, Response, NextFunction } from 'express';
 
-let Books = [];
+let Books: Array<BookModel> = [];
 
 export class bookController {
   public static getAllBooks = (

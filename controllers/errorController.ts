@@ -1,6 +1,6 @@
-const AppError = require('./../utils/appError');
+import { Request, Response, NextFunction } from 'express';
 
-const sendErrorDev = (err, req, res) => {
+const sendErrorDev = (err: any, req: Request, res: Response) => {
   return res.status(err.statusCode).json({
     status: err.status,
     error: err,
@@ -9,7 +9,7 @@ const sendErrorDev = (err, req, res) => {
   });
 };
 
-const sendErrorProd = (err, req, res) => {
+const sendErrorProd = (err: any, req: Request, res: Response) => {
   // A) Operational, trusted error: sendmessage to client
   if (err.isOperational) {
     return res.status(err.statusCode).json({
@@ -28,7 +28,7 @@ const sendErrorProd = (err, req, res) => {
   });
 };
 
-export default (err, req, res, next) => {
+export default (err: any, req: Request, res: Response, next: NextFunction) => {
   // console.log(err.stack);
 
   err.statusCode = err.statusCode || 500;
