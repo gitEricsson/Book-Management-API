@@ -15,7 +15,7 @@ You can decide to do one of two things:
 ### 1. Clone the repository
 
 ```
-$ git clone https://github.com/gitEricsson/Book-Management-API
+$ git clone https://github.com/gitEricsson/Book-Management-API.git
 ```
 
 After cloning book-management-api, build the tool by running:
