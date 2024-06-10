@@ -38,5 +38,5 @@ $ npm start
 To run the tests, use the following command:
 
 ```
-npm test
+$ npm test
 ```
