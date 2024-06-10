@@ -1,5 +1,5 @@
 import express from 'express';
-import { Request, Response, NextFunction } from 'express';
+import { Request, Response, NextFunction, Application } from 'express';
 import morgan from 'morgan';
 import helmet from 'helmet';
 import xss from 'xss-clean';
@@ -10,7 +10,7 @@ import { AppError } from './utils/appError';
 import globalErrorHandler from './controllers/errorController';
 import bookRouter from './routes/bookRoutes';
 
-const app = express();
+const app: Application = express();
 
 // Global MiddleWares
 

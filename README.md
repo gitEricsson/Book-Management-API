@@ -10,22 +10,33 @@ API documentation : [Postman](https://documenter.getpostman.com/view/29447789/2s
 
 ## Getting started
 
-You can decide to do one of two things:
-
-### 1. Clone the repository
+### Clone the repository
 
 ```
 $ git clone https://github.com/gitEricsson/Book-Management-API.git
+cd book-management-api
 ```
 
-After cloning book-management-api, build the tool by running:
+### Install dependencies
+
+After cloning book-management-api, install the dependencies by running:
 
 ```
 $ npm install
 ```
 
-### 2. Install the tool directly in your project
+### Initialize server
+
+To start the server, run:
 
 ```
-$ npm install https://github.com/gitEricsson/Book-Management-API@latest
+$ npm start
+```
+
+### Run tests
+
+To run the tests, use the following command:
+
+```
+npm test
 ```
